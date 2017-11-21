@@ -1,0 +1,27 @@
+body {
+  background: #263238;
+}
+
+h1 {
+  font-family: 'Merienda', cursive;
+  font-size: 5em;
+  color: #fff;
+  text-shadow: 5px 3px 2px #F4511E;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.wrap {
+  display: flex;
+  border: solid 5px yellow;
+  color: #fff;
+  height: 400px;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  border: solid 3px red;
+}
