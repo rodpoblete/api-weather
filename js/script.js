@@ -2,6 +2,8 @@ var content = document.getElementById("container");
 var clima = document.getElementById("clima");
 var temp = document.getElementById("temperatura");
 var weatherImage = document.getElementById("weather-image");
+var grados = document.getElementById("grados");
+var tFar = 0;
 
 function obtenerGeo() {
   if (navigator.geolocation) {
@@ -21,6 +23,7 @@ function coordenadas(position) {
     if (request.readyState === 4) {
       if (request.status === 200) {
         var cuerpo = JSON.parse(request.responseText);
+        tFar = cuerpo.main.temp * 1.8 + 32;
         content.innerHTML = cuerpo.name;
         clima.innerHTML = cuerpo.weather[0].main;
         temp.innerHTML = cuerpo.main.temp;
@@ -37,6 +40,14 @@ function coordenadas(position) {
   };
   request.open("Get", URL);
   request.send();
+}
+
+function celciusToFar() {
+  var btnCelcius = document.getElementById("celcius");
+  var btnFar = document.getElementById("fahrenheit");
+  temp.innerHTML = tFar;
+  btnCelcius.style.display = "none";
+  btnFar.style.display = "block";
 }
 
 obtenerGeo();

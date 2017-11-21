@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Api Weather</title>
   <link href="https://fonts.googleapis.com/css?family=Merienda:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700i" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'/>
   <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
   <h1>Weather App</h1>
   <section class="wrap">
-    <div id="container"></div>
-    <div id="clima"></div>
-    <div id="temperatura"></div>
-    <div id="weather-image"></div>
+    <div id="container" class="box box1"></div>
+    <div id="clima" class="box box2"></div>
+    <div id="temperatura" class="box box3"></div>
+    <div id="grados" class="box box4" onclick="celciusToFar()">
+      <a href="#" id="celcius">C</a>
+      <a href="#" style="display: none" id="fahrenheit">F</a>
+    </div>
+    <div id="weather-image" class="box box5"></div>
   </section>
+
+  <footer class="box6 box">
+    <p>Made With <i class="fa fa-heart" aria-hidden="true"></i> by Rod</p>
+  </footer>
 
   <script src="./js/script.js"></script>
 </body>
+
 </html>
